@@ -178,35 +178,108 @@
 
 # a=EMP("abi",18,120000)
 # print(a.sal())
-class Bank:
-   def __init__(self,name,balance=12000,ano=123):
-      self.name=name
-      self.__balance=balance
-      self.ano=ano
-   def depo(self):
-      print("do you want to deposit yes/no")
-      choo=input()
-      if choo=="yes":
-          print("enter deposit amount:")
-          self.depo=int(input())
-          self.__balance=self.__balance + self.depo
+# class Bank:
+#    def __init__(self,name,balance=12000,ano=123):
+#       self.name=name
+#       self.__balance=balance
+#       self.ano=ano
+#    def depo(self):
+#       print("do you want to deposit yes/no")
+#       choo=input()
+#       if choo=="yes":
+#           print("enter deposit amount:")
+#           self.depo=int(input())
+#           self.__balance=self.__balance + self.depo
           
 
-   def wit(self):
-       print("do you want to witdrawl yes/no")
-       choos=input()
-       if choos=="yes":
-         print("enter witdrawl number")
-         self.wit=int(input())
-         self.__balance=self.__balance - self.wit
+#    def wit(self):
+#        print("do you want to witdrawl yes/no")
+#        choos=input()
+#        if choos=="yes":
+#          print("enter witdrawl number")
+#          self.wit=int(input())
+#          self.__balance=self.__balance - self.wit
          
       
-print("enter your name\n")
-nam=input()
-print("enter your acno")
-acno=int(input())
-if acno == 123 :
-   bank=Bank(nam,acno)
-   print(bank.depo())
-   print(bank.wit())
-   
+# print("enter your name\n")
+# nam=input()
+# print("enter your acno")
+# acno=int(input())
+# if acno == 123 :
+#    bank=Bank(nam,acno)
+#    print(bank.depo())
+#    print(bank.wit())
+
+#armstrong number
+# num=int(input("enter the number :"))
+# num2=num
+# tot=0
+# digits=len(str(num))
+# while num2>0:
+#    digit=num2%10
+#    tot+=digit**digits
+#    num2 //=10
+# if tot==num:
+#     print("yes")
+# else:
+#    print("no")
+
+# number=int(input("enter the number :"))
+# num2=number
+# total=0
+# digits=len(str(number))
+# while num2>0:
+#    digit= num2%10
+#    total+=digit**digits
+#    num2//=10
+# if total==number:
+#    print("yes")
+# else:
+#    print("no")
+# rev=0
+# num3=number
+# while num3>0:
+#    digit=num3%10
+#    rev=rev*10 + digit
+#    num3//=10
+# if rev==number:
+#    print("yes")
+# else:
+#    print("no")
+    
+# for i in range(2,number):
+#    if number%i==0 :
+#       print("not")
+#       break
+#    else:
+#       print("prime number")
+# n = int(input("Enter a number: "))
+
+# if n <= 1:
+#     print("Not a prime number")
+# else:
+#     for i in range(2, n):
+#         if n % i == 0:
+#             print("Not a prime number")
+#             break
+#     else:
+#         print("Prime number")
+# for i in range(110):
+#    if i>=10:
+#       print("yes")
+#       break
+# else:
+#    print("no")
+
+# word="abi khadka is dammi dammi is abi khadka abi"
+# word=word.split()
+# print(word)
+# freq={}
+# for i in word:
+#    freq[i]= freq.get(i,0)+1
+# print(freq)
+# maxx=max(freq,key=freq.get)
+# print(f"{maxx} is most repeated {freq[maxx]} times")
+a=[[1,2],[1,3,4,5]]
+aa=[item for sublist in a for item in sublist ]
+print(aa)
