@@ -280,6 +280,136 @@
 # print(freq)
 # maxx=max(freq,key=freq.get)
 # print(f"{maxx} is most repeated {freq[maxx]} times")
-a=[[1,2],[1,3,4,5]]
-aa=[item for sublist in a for item in sublist ]
-print(aa)
+# a=[[1,2],[1,3,4,5]]
+# aa=[item for sublist in a for item in sublist ]
+# print(aa)
+# print(max(aa))
+# print(min(aa))
+# dic={ak:ak**2 for ak in aa }
+# print(dic)
+# lis=[1,2,3,4,5,6,7]
+# def filt(n):
+#     for i in range(len(n)):
+#         if n[i]%2==0:
+#             print("even")
+#         else:
+#             print("no")
+# print(filt(lis))
+# def eve(n):
+#     ret=[]
+#     for i in n:
+#         if i%2==0:
+#             ret.append(i)
+#     return ret
+# a=eve(lis)
+# print(a)
+#password validator
+# pas=input("enter your password : \n")
+# special=["@","#","%"]
+# if len(pas)>8:
+#     for  i in pas:
+#         if i.isupper():
+#             print("UPPER CASE FOUND")
+#         elif i in special:
+#             print("special character found ")
+# else:
+#     print("enter your password again ")
+
+# data=[10,"20",30,"abc",40]
+# la=[]
+# for i in data:
+#     if isinstance(i,int) :
+#         la.append(i)
+#     elif isinstance(i,str) and i.isdigit():
+#         i=int(i)
+#         la.append(i)
+# print(la)         
+# print(sum(la)/len(la))
+# data = {
+#     "a": 1,
+#     "b": 2,
+#     "c": 1,
+#     "d": 2
+# }
+# rev={}
+# for key,values  in data.items():
+#     if values in rev:
+#         rev[values].append(key)
+#     else:
+#         rev[values]=[key]
+# print(rev)
+#library
+# class Book:
+#     def __init__(self):
+#         self.book=[]
+#     def add(self):
+#         self.choo=input("book add garna manxa?:\n")
+#         if self.choo=="yes":
+#             self.bookname=input("enter the name of book \n")
+#             self.book.append(self.bookname)
+#             print("sucessfully addef \n")
+#         else:
+#             print("bhag muji ")
+#     def show(self):
+#         self.bookname=input("enter the name of book \n")
+#         if self.bookname in self.book:
+#                 print(self.book)
+#         else:
+#             print("xaina book ")  
+
+# a=Book()
+# a.add() 
+# a.show()
+# class Employee:
+#     def __init__(self):
+#         self.name=input("enter your name :")
+#         self.salary=int(input("enter your salary "))
+#     def bonus(self):
+#         if self.salary>50000:
+#             self.salary=self.salary+((10/self.salary)*100)
+#         else:
+#             self.salary=self.salary +((5/self.salary)*100)
+#         return f"{self.name} and salary is {self.salary }"  
+# a=Employee()
+# print(a.bonus())
+
+print("SHOPPE:\n")
+buy={}
+while True :
+    print("ENTER OPTION 1 FOR ADDING :\n")        
+    print("ENTER OPTION 2 FOR REMOVING :\n") 
+    print("ENTER OPTION 3 FOR VIEWING THE OBJECT:\n")
+    print("ENTER OPTION 4 FOR  VIEWING ALL OBJECTS:\n")       
+    print("ENTER OPTION 5 FOR EXIT :\n")
+    choos=int(input("enter the choice"))
+    if choos == 1:
+        options=input("ENTER YOUR PRODUCT:")
+        quantity=int(input("ENTER THE QUANTITY "))
+        buy[options]=quantity
+        print("sucess!!!")
+    elif choos == 2:
+        options=input("ENTER  WHAT TO REMOVE:")
+        if options in buy:
+            buy.pop(options)
+            print("sucess")
+    elif choos==3:
+        options=input("ENTER THE PRODUCT NAME:")
+        if options  in buy:
+            print(buy[options])
+    elif choos==4:
+        print(buy)
+    elif choos == 5:
+        break
+    else:
+        break
+rate=20
+for i in buy :
+    print ("calculating total :\n")
+    buy[i]=buy[i]*rate
+print(f"TOTAL IS : {buy}")    
+
+
+                
+        
+    
+            
