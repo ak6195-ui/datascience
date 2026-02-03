@@ -373,41 +373,99 @@
 # a=Employee()
 # print(a.bonus())
 
-print("SHOPPE:\n")
-buy={}
-while True :
-    print("ENTER OPTION 1 FOR ADDING :\n")        
-    print("ENTER OPTION 2 FOR REMOVING :\n") 
-    print("ENTER OPTION 3 FOR VIEWING THE OBJECT:\n")
-    print("ENTER OPTION 4 FOR  VIEWING ALL OBJECTS:\n")       
-    print("ENTER OPTION 5 FOR EXIT :\n")
-    choos=int(input("enter the choice"))
-    if choos == 1:
-        options=input("ENTER YOUR PRODUCT:")
-        quantity=int(input("ENTER THE QUANTITY "))
-        buy[options]=quantity
-        print("sucess!!!")
-    elif choos == 2:
-        options=input("ENTER  WHAT TO REMOVE:")
-        if options in buy:
-            buy.pop(options)
-            print("sucess")
-    elif choos==3:
-        options=input("ENTER THE PRODUCT NAME:")
-        if options  in buy:
-            print(buy[options])
-    elif choos==4:
-        print(buy)
-    elif choos == 5:
-        break
-    else:
-        break
-rate=20
-for i in buy :
-    print ("calculating total :\n")
-    buy[i]=buy[i]*rate
-print(f"TOTAL IS : {buy}")    
+# print("SHOPPE:\n")
+# buy={}
+# while True :
+#     print("ENTER OPTION 1 FOR ADDING :\n")        
+#     print("ENTER OPTION 2 FOR REMOVING :\n") 
+#     print("ENTER OPTION 3 FOR VIEWING THE OBJECT:\n")
+#     print("ENTER OPTION 4 FOR  VIEWING ALL OBJECTS:\n")       
+#     print("ENTER OPTION 5 FOR EXIT :\n")
+#     choos=int(input("enter the choice"))
+#     if choos == 1:
+#         options=input("ENTER YOUR PRODUCT:")
+#         quantity=int(input("ENTER THE QUANTITY "))
+#         buy[options]=quantity
+#         print("sucess!!!")
+#     elif choos == 2:
+#         options=input("ENTER  WHAT TO REMOVE:")
+#         if options in buy:
+#             buy.pop(options)
+#             print("sucess")
+#     elif choos==3:
+#         options=input("ENTER THE PRODUCT NAME:")
+#         if options  in buy:
+#             print(buy[options])
+#     elif choos==4:
+#         print(buy)
+#     elif choos == 5:
+#         break
+#     else:
+#         break
+# rate=20
+# for i in buy :
+#     print ("calculating total :\n")
+#     buy[i]=buy[i]*rate
+# print(f"TOTAL IS : {buy}")    
 
+from abc import ABC,abstractmethod
+class  Account(ABC):
+    def __init__(self,name,balance):
+        self.name=name
+        self.balance=balance
+    @abstractmethod
+    def  calculate_interest(self):
+        pass
+class Savingaccount(Account):
+    def calculate_interest(self):
+        return  int(self.balance)*0.04
+class Currentaccount(Account):
+    def  calculate_interest(self):
+        return  int(self.balance*0.02)
+class Bank(Account):
+    def deposit(self,amount):
+        if amount>0:
+            self.balance+=amount
+    def withdraw(self,amount):
+        if  0<amount<=self.balance:
+            self.balance-=amount
+        else:
+            print("paisa pugena")
+    def __str__(self):
+        return  f"Account holder:{self.name}"
+    def __len__(self):
+        return int(self.balance)
+    def __add__(self,other):
+        return self.balance+other
+def total(accountt,index=0):
+    if index==len(accountt):
+        return 0
+    return accountt[index].balance+total(accountt,index+1)
+account=[]
+while True:
+    print("do you want to enter the account name and balance :")
+    print("yes ko lagi 1 dabaunus")
+    print("no ko lagi 2 dabaunus")
+    choice=int(input())
+    if choice==1:
+        print("enter 1 again for saving account:\n")
+        print("enter 2 again for current account :\n")
+        choice1=int(input())
+        if choice1==1:
+            name=input("enter your name :\n")
+            balance=input("enter your balance \n")
+            account.append(Savingaccount(name,balance))
+        elif choice1==2:
+            name=input("enter your name :\n")
+            balance=input("enter your balance \n")
+            account.append(Currentaccount(name,balance))
+    elif choice==2:
+        break 
+#interest_list=list(map(lambda acc:acc.calculate_interest(),account))
+#print(interest_list)
+#print(total(account))
+print(account)
+print(Bank)
 
                 
         
