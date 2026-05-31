@@ -73,7 +73,3 @@
 # is_palindrome()
 
 #4
-
-# def rev(strr=""):
-#     if   
-print("a"+"b")  

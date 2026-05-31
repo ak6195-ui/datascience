@@ -25,7 +25,7 @@ while  True:
         choose=int(input())
         if choose==1:
             print("PLEASE ENTER THE AMOUNT :\n")
-            amount=(input())
+            amount=int(input())
             ss.deposit(amount)
         elif choose==2:
             print("PLEASE ENTER THE AMOUNT :\n")
