@@ -1,0 +1,16 @@
+Customer_ID,Name,Age,Gender,City,Income,Purchase_Amount,Rating,Payment_Method
+101,Aarav,22,Male,Kathmandu,35000,1200,4.5,eSewa
+102,Sita,25,Female,Pokhara,42000,1800,4.8,Khalti
+103,Ram,31,Male,Biratnagar,55000,2500,4.2,Cash
+104,Gita,28,Female,Dharan,47000,2100,4.7,Card
+105,Krishna,35,Male,Kathmandu,62000,3200,4.9,eSewa
+106,Anita,24,Female,Butwal,39000,1700,4.3,Khalti
+107,Rohan,29,Male,Chitwan,51000,2600,4.6,Card
+108,Priya,27,Female,Kathmandu,48000,2300,4.4,eSewa
+109,Sabin,40,Male,Pokhara,70000,4000,4.8,Cash
+110,Nisha,23,Female,Dharan,36000,1500,4.1,Khalti
+111,Bikash,32,Male,Biratnagar,58000,2900,4.7,eSewa
+112,Sarita,30,Female,Kathmandu,53000,2800,4.6,Card
+113,Manish,26,Male,Butwal,45000,2000,4.2,Cash
+114,Rita,34,Female,Pokhara,60000,3400,4.9,eSewa
+115,Deepak,38,Male,Chitwan,68000,3900,4.8,Card
